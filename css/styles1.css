@@ -1,0 +1,323 @@
+html,
+body{
+	padding:0;
+	margin:0;
+	background: rgb(77, 77, 77);
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size:100%; /* 16px */
+}
+
+#header-unit{
+	max-width:100%;
+	height: 20em;
+	color:white;
+    border-bottom:2px solid rgba(66, 66, 66, 0.90);
+    position:relative;
+    top:-2em;
+	background: url(../pics/banner/laptop.jpg) repeat;	/* Replace with a banner/color/whatever you want */
+	background-size: cover; /* The background image resizes and fits itself dynamically */
+}
+
+#header-unit h1{
+    font-size: 3em;
+    font-weight: 300;
+    padding-top:4em;
+    margin:auto;
+    width:8em;
+}
+
+section h1{ /* All the h1s on this website are affected by these settings */
+	font-size: 2em;
+	font-weight: 300;
+    margin:0; /* Takes away all the unnecessary spacing from the h1 - tags inside the section  */
+}
+
+#container{ /* A major container. This container holds all the actual content on the page */
+	float:left;
+	width:70.208473436%; /* 1044px / 1487px */
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.nav_div{ /* Nav_div's settings. Dropdown buttons are on top of this div */
+	background-color: rgba(97, 97, 97, 0.90);
+	width:100%;
+	position:fixed;
+    top:0;
+	z-index: 1;
+}
+
+.images{
+	float:right;
+	max-width: 300px;
+	min-width: 240px;
+	border-radius: 5px;
+	width:30%;
+	height:auto;
+	margin:0 1em 1em 1em;
+	z-index: 0;
+    box-shadow: 3px 3px 4px #232323;
+}
+
+footer{
+	clear:both;
+	border-top:2px solid rgb(62, 62, 62);
+	color: rgba(255, 255, 255, 0.90);
+	margin-top:2em;
+	padding:1.2em;
+}
+
+section{
+    width:77.447916666%; /* 1487px / 1920px */
+    margin:auto;
+}
+
+section:before, /* Micro clearfix hack by Nicolas Gallagher @ http://nicolasgallagher.com/micro-clearfix-hack/ */
+section:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+section:after {
+    clear: both;
+}
+
+/* ****************** BELOW: aside_div and it's buttons ******************  */
+#aside_container{ /* Contains all the buttons */
+    width:29.388029589%; /* 437px / 1491px */
+    float:right;
+}
+
+.aside_buttons{ /* Centers the buttons inside the aside_container */
+    margin: 1em auto 1em auto;
+    width:81.632653061%; /* 240px / 294px */
+    max-width:270px;
+}
+
+.aside_buttons button,	/* Buttons' styles and hover over - settings */
+.aside_buttons button:hover{
+	background-color: #616161;
+    text-align: center;
+	cursor:pointer;
+    padding:1.45em;
+	font-size:1em;
+	font-weight:300;
+    width:100%; /* Spreads the button across the container */
+    border:1px solid #454545;
+    border-radius: 5px;
+}
+
+.aside_buttons button{ /* Sets the base - color for the aside button's font */
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.aside_buttons button:hover{ /* Button mouse hover */
+	background-color: rgb(143, 143, 143);
+	color: #fafafa;
+}
+/* ****************** ABOVE: aside_div's button ******************  */
+
+
+/* ****************** BELOW: dropdown menu's styling configurations ******************  */
+.dropdown,
+.dropdown ul,
+.dropdown li{
+	display        : inline;
+	margin         : 0;
+	padding        : 0;
+	font-weight    : 400;
+	font-size      : 1em;
+	letter-spacing : 1px;
+}
+
+.dropdown{
+	margin-right: 5em;
+	float       : right;
+}
+
+.dropdown ul{
+	display  : none;
+	position : absolute;
+	top      : 100%;
+	left     : 0;
+	z-index  : 1;
+}
+
+[dir=rtl] .dropdown ul{
+	left  : auto;
+	right : 0;
+}
+
+.dropdown ul ul,
+[dir=rtl] .dropdown ul .dropdownLeftToRight ul{
+	top   : 0;
+	left  : 100%;
+	right : auto;
+}
+
+[dir=rtl] .dropdown ul ul,
+.dropdown ul .dropdownRightToLeft ul{
+	left  : auto;
+	right : 100%;
+}
+
+.dropdown li{
+	position        : relative;
+	display         : block;
+	list-style-type : none;
+}
+
+.dropdown > li{
+	display : inline-block;
+}
+
+.dropdown a,
+.dropdown span{
+	display         : block;
+	text-decoration : none;
+	white-space     : pre;
+}
+
+.dropdown li:hover > ul{
+	display : block;
+}
+
+.dropdownVertical{
+	display : inline-block;
+}
+
+.dropdownVertical > li{
+	display : block;
+}
+
+.dropdownVertical ul{
+	top  : 0;
+	left : 100%;
+}
+
+[dir=rtl] .dropdownVertical ul{
+	left  : auto;
+	right : 100%;
+}
+
+.dropdownJavaScript li:hover > ul{
+	display : none;
+}
+
+.dropdownJavaScript li.dropdownOpen > ul{
+	display : block;
+}
+
+/* set the background colour */
+.dropdown ul{
+	background-color: rgb(97, 97, 97);
+}
+
+/* pad items, set their text colour, and fade their background colour */
+.dropdown a,
+.dropdown span{
+	padding    : 0.8em 1em;
+	color: #dddddd;
+	transition : background 0.2s;
+}
+
+/* set the background colour of active items */
+.dropdown li:hover > a,
+.dropdown li:hover > span,
+.dropdown li.dropdownOpen > a,
+.dropdown li.dropdownOpen > span{
+	background-color: rgb(136, 136, 136);
+}
+/* ****************** ABOVE: dropdown menu's styling configurations ******************  */
+
+
+
+/* ****************** BELOW: Media queries ******************  */
+@media screen and (max-width: 1280px) {
+    #container{ /* A major container. This container holds all the actual content on the page */
+        width:62.5%; /* 800px / 1280px */
+    }
+}
+
+@media screen and (max-width: 830px) {
+	body {
+		font-size: 95%;
+	}
+
+	#header-unit {
+        background: url(../pics/banner/tablet.jpg) repeat; /* Replace with a banner/color/whatever you want */
+        background-size: cover;
+    }
+
+    .images{
+        width:50%;
+        min-width:200px;
+        float:none;
+        display: block;
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+	#header-unit{
+		background: url(../pics/banner/phone.jpg) repeat;	/* Replace with a banner/color/whatever you want */
+        background-size:cover;
+	}
+
+	#container{
+        float:none;
+		width:95%;
+		margin:auto;
+	}
+
+    #header-unit h1{
+        font-size: 2em;
+    }
+
+	section h1{
+		font-size: 1.6em;
+	}
+
+    .container{
+        float:right;
+    }
+
+    #aside_container{ /* Contains all the buttons */
+        float:none;
+        margin:auto;
+        width:80%;
+    }
+
+    .aside_buttons{ /* Centers the buttons inside the aside_container */
+        margin:auto;
+        width:100%;
+    }
+
+    .aside_buttons button,	/* Buttons' styles and hover over - settings */
+    .aside_buttons button:hover{
+        background-color: #616161;
+        text-align: center;
+        cursor:pointer;
+        padding:1em;
+        font-size:1em;
+        font-weight:300;
+        width:100%;
+        border:1px solid #454545;
+    }
+
+    .aside_buttons button{ /* Sets the base - color for the aside button's font */
+        color: rgba(255, 255, 255, 0.82);
+    }
+
+    .aside_buttons button:hover{ /* Button mouse hover */
+        background-color: rgb(143, 143, 143);
+        color: #fafafa;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .dropdown{
+        display:none;
+    }
+}
+/* ****************** ABOVE: Media queries ******************  */
